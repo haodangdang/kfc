@@ -15,7 +15,7 @@
                 "content": "你霸气又潇洒，每一次努力都离目标更近了一步！"
             },
             "5": {
-                "week_percent": 98,
+                "week_percent": 0,
                 "content": "请再接再厉！"
             },
             "6": {
@@ -80,6 +80,10 @@
             },
             onTransitionEnd: function (swiper) {
                 var index = swiper.activeIndex;
+                var preIndex = swiper.previousIndex;
+                if(index == preIndex){
+                    return
+                }
                 $('.page_item').removeClass('active');
                 $('.page_item').find('.sub_item').removeClass('show')
                 $('.page_item').find('.sub_item').removeClass('show2')
@@ -219,7 +223,7 @@
         var src_percent;
         $('#week_percent').html(percent);
         $('#page5_content').html(page_5.content);
-        if(percent > 0 && percent <= 30){
+        if(percent >= 0 && percent <= 30){
             src_percent = 25
         }else if(percent > 30 && percent <= 70){
             src_percent = 50
