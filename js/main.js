@@ -4,6 +4,7 @@
         "msg": "成功",
         "data": {
             "3": {
+                "date": "截止01月20日",
                 "bucket_price": 98.4,
                 "big_bucket": 123,
                 "small_bucket": 123,
@@ -170,29 +171,29 @@
         var id = $('.input').val()
         if(id != ''){
             let url = 'http://kfc.it2048.cn/v0/get-shop-info?id=' + id
-            $.ajax({
-                url: url,
-                type: 'get',
-                method: 'get',
-                dataType: 'json',
-                success: function (res) {
-                    if(res.code === 0){
-                        initSwiper();
-                        setData(res.data);
-                    }else{
-                        $('.err').addClass('show')
-                        setTimeout(function () {
-                            $('.err').removeClass('show')
-                        }, 2000)
-                    }
-                },
-                error: function (res) {
-                    alert(res.msg)
-                }
-            });
+            // $.ajax({
+            //     url: url,
+            //     type: 'get',
+            //     method: 'get',
+            //     dataType: 'json',
+            //     success: function (res) {
+            //         if(res.code === 0){
+            //             initSwiper();
+            //             setData(res.data);
+            //         }else{
+            //             $('.err').addClass('show')
+            //             setTimeout(function () {
+            //                 $('.err').removeClass('show')
+            //             }, 2000)
+            //         }
+            //     },
+            //     error: function (res) {
+            //         alert(res.msg)
+            //     }
+            // });
 
-            // initSwiper();
-            // setData(res.data);
+            initSwiper();
+            setData(res.data);
 
         }else{
             $('.err').addClass('show')
@@ -207,6 +208,7 @@
             page_4 = data['4'],
             page_5 = data['5'],
             page_6 = data['6'];
+        $('#date').html(page_3.date);
         $('#bucket_price_big').html(page_3.bucket_price + '元');
         $('#bucket_price').html(page_3.bucket_price);
         $('#big_bucket').html(page_3.big_bucket);
