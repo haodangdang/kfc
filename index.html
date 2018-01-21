@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, minimal-ui">
+    <title>kfc</title>
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link rel="stylesheet" href="css/swiper.min.css" media="all">
+</head>
+<body>
+    <div class="main">
+        <!-- Swiper -->
+        <div class="music">
+            <div style="height:0px;overflow:hidden;">
+                <audio src="./audio/bgm.mp3" loop="loop" autoplay="autoplay"></audio>
+            </div>
+            <a id="play_btn" href="javascript:playPause();">
+                <div class="music_btn border_anim">
+                    <span class="iconaudio1"><s class="music_btn_anim"></s></span>
+                    <span class="iconaudio2"><s class="music_btn_anim"></s></span>
+                    <span class="iconaudio3"><s class="music_btn_anim"></s></span>
+                </div>
+            </a>
+        </div>
+        <div class="entry_wrap">
+            <div class="entry">
+                <div class="entry_item top">
+                    <img src="./img/page1_top.png" alt="">
+                </div>
+                <div class="entry_item yanhua">
+                    <img src="./img/page1_yanhua.png" alt="">
+                </div>
+                <div class="entry_item denglong">
+                    <img src="./img/page1_denglong.png" alt="">
+                </div>
+                <div class="entry_item logo">
+                    <img src="./img/logo.png" alt="">
+                </div>
+                <div class="entry_item jintongwangcai">
+                    <img src="./img/page1_jintongwangcai.png" alt="">
+                </div>
+                <div class="entry_item delay_2 dog">
+                    <img src="./img/page1_dog.png" alt="">
+                </div>
+
+                <div class="entry_item bottom">
+                    <img src="./img/page1_bottom.png" alt="">
+                </div>
+                <div class="entry_item btn_wrap">
+                    <div class="btn enter_btn">开启鸿运</div>
+                </div>
+            </div>
+            <div class="login">
+
+                <div class="login_wrap">
+                    <div class="close_btn"></div>
+                    <div class="err">请输入正确id</div>
+                    <input type="text" class="input" placeholder="请输入ID">
+                    <div class="login_btn">查询</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_swiper swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide page_item" id="page_0">
+                    <div class="sub_item cloud leftright">
+                        <img src="./img/cloud.png" alt="">
+                    </div>
+                    <div class="sub_item sanjiao sanjiao1 rotate">
+                        <img src="./img/sanjiao.png" alt="">
+                    </div>
+                    <div class="sub_item sanjiao sanjiao2 rotate">
+                        <img src="./img/sanjiao2.png" alt="">
+                    </div>
+                    <div class="sub_item bling">
+                        <img src="./img/bling.png" alt="">
+                    </div>
+                    <div class="sub_item delay_2 fly updown">
+                        <img src="./img/fly.png" alt="">
+                        <div class="tfboy qianxi wobble">
+                            <img src="./img/qianxi.png" alt="">
+                        </div>
+                        <div class="tfboy junkai wobble">
+                            <img src="./img/junkai.png" alt="">
+                        </div>
+                        <div class="tfboy wangyuan wobble">
+                            <img src="./img/wangyuan.png" alt="">
+                        </div>
+                    </div>
+                    <div class="sub_item kfc_house">
+                        <img src="./img/kfc_house.png" alt="">
+                    </div>
+                    <div class="sub_item info">
+                        <div class="big"><b id="bucket_price_big">--</b></div>
+                        <div class="small black">
+                            截止--月--日<br>
+                            你餐厅前台伙伴获得<b id="bucket_price">--</b>元<br>
+                            你餐厅大桶售卖<b id="big_bucket">--</b>个<br>
+                            小桶售卖<b id="small_bucket">--</b>个
+                        </div>
+                        <div class="small gray" id="page3_content">--</div>
+                    </div>
+                    <div class="sub_item bottom">
+                        <img src="./img/page2_bottom.png" alt="">
+                    </div>
+                    <div class="sub_item kfc_small">
+                        <img src="./img/kfc_small.png" alt="">
+                    </div>
+                    <div class="tips"></div>
+                </div>
+                <div class="swiper-slide page_item" id="page_1">
+                    <div class="sub_item caishen">
+                        <img src="./img/caishen.png" alt="">
+                    </div>
+                    <div class="sub_item sanjiao sanjiao3 rotate">
+                        <img src="./img/sanjiao.png" alt="">
+                    </div>
+                    <div class="sub_item delay_2 bird updownsmall">
+                        <img src="./img/bird.png" alt="">
+                    </div>
+                    <div class="sub_item flower rotateInDownRight">
+                        <img src="./img/flower.png" alt="">
+                    </div>
+                    <div class="sub_item cloud_1 leftright">
+                        <img src="./img/cloud_1.png" alt="">
+                    </div>
+                    <div class="sub_item info">
+                        <div class="big"><b id="zone_sort_big">--</b></div>
+                        <div class="small black">
+                            1月22日<br>
+                            SALES达成周排名区域第<b id="zone_sort">--</b>名<br>
+                            超过<b id="zone_percent">--</b>％的小伙伴
+                        </div>
+                        <div class="small gray" id="page4_content">--</div>
+                    </div>
+                    <div class="sub_item bottom">
+                        <img src="./img/page3_bottom.png" alt="">
+                    </div>
+                    <div class="sub_item kfc_small">
+                        <img src="./img/kfc_small_red.png" alt="">
+                    </div>
+                    <div class="tips"></div>
+                </div>
+                <div class="swiper-slide page_item" id="page_2">
+                    <div class="sub_item top">
+                        <img src="./img/page1_top.png" alt="">
+                    </div>
+                    <div class="sub_item kfc_tong">
+                        <div class="jinbi">
+                            <ul class="couten"></ul>
+                        </div>
+                        <img class="kfc_tong_1" src="./img/kfc_tong_1.png" alt="">
+                        <div class="jinbi_all">
+                            <img id="percent_img" src="" alt="">
+                        </div>
+                        <img class="kfc_tong_2" src="./img/kfc_tong_2.png" alt="">
+                    </div>
+                    <div class="sub_item baifen">
+                        本周你的金桶销量已达成<b id="week_percent">--</b>％<br>
+                        再接再厉哦
+                    </div>
+                    <div class="sub_item delay_2 dog">
+                        <img src="./img/page1_dog.png" alt="">
+                    </div>
+                    <div class="sub_item kfc_small">
+                        <img src="./img/kfc_small.png" alt="">
+                    </div>
+                    <div class="sub_item bottom">
+                        <img src="./img/page4_bottom.png" alt="">
+                    </div>
+                    <div class="tips"></div>
+                </div>
+                <div class="swiper-slide page_item" id="page_3">
+                    <div class="sub_item qiqiu">
+                        <img src="./img/qiqiu.png" alt="">
+                    </div>
+                    <div class="sub_item cloud leftright">
+                        <img src="./img/cloud.png" alt="">
+                    </div>
+                    <div class="sub_item sanjiao sanjiao5 rotate">
+                        <img src="./img/sanjiao_4.png" alt="">
+                    </div>
+                    <div class="sub_item delay_2 bird bird_1 updownsmall">
+                        <img src="./img/bird_2.png" alt="">
+                    </div>
+                    <div class="sub_item sanjiao sanjiao4 rotate">
+                        <img src="./img/sanjiao_3.png" alt="">
+                    </div>
+                    <div class="sub_item kfc_tou">
+                        <img src="./img/kfc_tou.png" alt="">
+                    </div>
+                    <div class="sub_item info">
+                        <div class="big"><b id="reward_big">--</b></div>
+                        <div class="small black">
+                            恭喜你达成周SALES目标，获得奖金
+                            <b id="reward">--</b>元，累计奖金<b id="reward_cnt">--</b>元。
+                        </div>
+                        <div class="small gray">都说你很厉害果然名不虚传！<br>我们为你点赞，期待你下周的表现</div>
+                    </div>
+                    <div class="sub_item bottom">
+                        <img src="./img/page5_bottom.png" alt="">
+                    </div>
+                    <div class="sub_item kfc_small">
+                        <img src="./img/kfc_small.png" alt="">
+                    </div>
+                    <div class="sub_item btn_wrap">
+                        <div class="btn enter_btn">再看一遍</div>
+                    </div>
+                    <div class="sub_item next">
+                        <span>期待你下周的精彩表现</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="down_btn_wrap">
+            <div class="down_btn"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/lib/zepto.js"></script>
+    <script type="text/javascript" src="js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
