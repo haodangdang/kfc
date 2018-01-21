@@ -1,5 +1,5 @@
 !(function () {
-    var data = {
+    var res = {
         "code": 0,
         "msg": "成功",
         "data": {
@@ -16,7 +16,7 @@
             },
             "5": {
                 "week_percent": 98,
-                "content": "你的金桶已装满98%的金币，请再接再厉"
+                "content": "请再接再厉！"
             },
             "6": {
                 "reward": 456456,
@@ -182,6 +182,9 @@
                 }
             });
 
+            // initSwiper();
+            // setData(res.data);
+
         }else{
             $('.err').addClass('show')
             setTimeout(function () {
@@ -210,6 +213,7 @@
         var percent = page_5.week_percent;
         var src_percent;
         $('#week_percent').html(percent);
+        $('#page5_content').html(page_5.content);
         if(percent > 0 && percent <= 30){
             src_percent = 25
         }else if(percent > 30 && percent <= 70){
@@ -224,6 +228,8 @@
         $('#reward_big').html(page_6.reward + '元');
         $('#reward').html(page_6.reward);
         $('#reward_cnt').html(page_6.reward_cnt);
+        $('#page6_content').html(page_6.content);
+
     }
 
     function param2json (str) {
