@@ -66,6 +66,7 @@
         swiper = new Swiper('.main_swiper', {
             direction: 'vertical',
             mousewheelControl: true,
+            freeModeSticky : true,
             onInit: function (swiper) {
                 var index = swiper.activeIndex;
                 $('#page_' + index).addClass('active');
@@ -79,6 +80,9 @@
             },
             onTransitionEnd: function (swiper) {
                 var index = swiper.activeIndex;
+                if(index == 3){
+                    return
+                }
                 $('.page_item').removeClass('active');
                 $('.page_item').find('.sub_item').removeClass('show')
                 $('.page_item').find('.sub_item').removeClass('show2')
