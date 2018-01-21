@@ -38,6 +38,10 @@
         getData()
     })
 
+    $('.re_btn').on('click', function () {
+        swiper.slideTo(0, 100);
+    })
+
     $('html').one('touchstart',function(){
         var myVideo = document.querySelectorAll('audio')[0];
         myVideo.play();
@@ -51,14 +55,15 @@
     init()
 
     var beginTime = 2000;
-    var endTime = 8;
+    var endTime = 4;
     var addJinbiTimer;
+    var swiper
 
 
     function initSwiper() {
         $('.entry_wrap').addClass('hidden');
         $('.main_swiper').addClass('show');
-        var swiper = new Swiper('.main_swiper', {
+        swiper = new Swiper('.main_swiper', {
             direction: 'vertical',
             mousewheelControl: true,
             onInit: function (swiper) {
@@ -92,7 +97,7 @@
                 }else{
                     clearTimeout(backwardTimer);
                     clearTimeout(addJinbiTimer);
-                    endTime = 8;
+                    endTime = 4;
                 }
             }
         });
@@ -158,7 +163,6 @@
 
     function getData() {
         var id = $('.input').val()
-        console.log('id ',id)
         if(id != ''){
             let url = 'http://kfc.it2048.cn/v0/get-shop-info?id=' + id
             $.ajax({

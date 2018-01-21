@@ -691,7 +691,7 @@ html,body{height: 100%;width: 100%;}
     width: 100%;
     height: 100%;
 }
-.enter_btn{
+.enter_btn, .re_btn{
     bottom: 180px;
 }
 .login{
